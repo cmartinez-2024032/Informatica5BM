@@ -1,0 +1,402 @@
+/* ===== Estilos Globales Premium ===== */
+:root {
+    --color-primario: #2c2c2c;
+    --color-secundario: #bfa06b;
+    --color-terciario: #fdf6f0;
+    --color-texto: #4d4d4d;
+    --color-destacado: #e0d6d1;
+    --color-hover: #a68655;
+    --color-error: #f44336;
+    --color-exito: #4caf50;
+    --sombra: 0 15px 40px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 20px 50px rgba(0, 0, 0, 0.12);
+    --transicion: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-radius: 15px;
+    --fuente-titulo: 'Georgia', serif;
+    --fuente-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    background: linear-gradient(135deg, var(--color-terciario), var(--color-destacado));
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ===== Efecto de Fondo Premium ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/zapasfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    z-index: -1;
+}
+
+/* ===== Barra de Navegación de Lujo ===== */
+nav {
+    width: 100%;
+    padding: 20px 60px;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transicion);
+}
+
+nav .logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion);
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secundario);
+    transition: var(--transicion);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== Contenedor Principal con Efectos Premium ===== */
+.contenedor-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 50px;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ===== Formulario de Alta Gama ===== */
+.form-container {
+    background-color: #fff;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+    min-width: 350px;
+    max-width: 450px;
+    position: relative;
+    transition: var(--transicion);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-container:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 35px;
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-secundario), var(--color-hover));
+}
+
+.formulario input {
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transicion);
+    background-color: #f9f9f9;
+}
+
+.formulario input:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(191, 160, 107, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Botones Premium */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botones button {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-secundario), var(--color-hover));
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion);
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botones button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--color-hover), var(--color-secundario));
+}
+
+.marca-interna {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(191, 160, 107, 0.3);
+    font-family: var(--fuente-titulo);
+    letter-spacing: 2px;
+}
+
+/* ===== Tabla de Zapatos de Lujo ===== */
+.table-container {
+    flex: 2;
+    overflow-x: auto;
+    min-width: 600px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    min-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background: linear-gradient(135deg, var(--color-primario), #1a1a1a);
+    color: #fff;
+}
+
+thead th {
+    padding: 20px 25px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-family: var(--fuente-titulo);
+}
+
+tbody td {
+    padding: 18px 25px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: var(--color-texto);
+}
+
+tbody tr:hover {
+    background-color: rgba(191, 160, 107, 0.05);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botones de Acción Premium */
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transicion);
+    letter-spacing: 0.3px;
+    display: inline-block;
+    text-align: center;
+}
+
+.editar {
+    background: linear-gradient(135deg, var(--color-exito), #3d8b40);
+    color: #fff;
+}
+
+.editar:hover {
+    background: linear-gradient(135deg, #3d8b40, var(--color-exito));
+    transform: translateY(-2px);
+}
+
+.eliminar {
+    background: linear-gradient(135deg, var(--color-error), #c62828);
+    color: #fff;
+}
+
+.eliminar:hover {
+    background: linear-gradient(135deg, #c62828, var(--color-error));
+    transform: translateY(-2px);
+}
+
+/* ===== Iframe Premium ===== */
+iframe {
+    width: 95%;
+    height: 1200px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-hover);
+    margin: 40px auto;
+    display: block;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Pie de Página de Lujo ===== */
+footer {
+    background-color: var(--color-primario);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+footer a:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
+/* ===== Animaciones y Efectos Premium ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-container, .table-container, iframe {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* ===== Diseño Responsivo Premium ===== */
+@media (max-width: 1200px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 30px;
+    }
+
+    iframe {
+        height: 700px;
+    }
+
+    nav {
+        padding: 15px 30px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .form-container, .table-container {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    iframe {
+        height: 500px;
+    }
+}

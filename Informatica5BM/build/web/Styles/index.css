@@ -1,0 +1,82 @@
+/* ===== Reset básico ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que body y html ocupen todo el alto */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Fondo con imagen que cubre todo el viewport */
+    background-image: url('../images/zapasfondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fefefe; /* texto claro para que contraste con fondo oscuro */
+    position: relative;
+
+    /* Evita que fondo blanco aparezca */
+    background-color: transparent;
+}
+
+/* ===== Encabezado ===== */
+h1 {
+    text-align: center;
+    color: #fefefe; /* texto claro para el encabezado */
+    margin: 30px 0 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    background-color: transparent; /* asegúrate que no tenga fondo blanco */
+}
+
+/* ===== Párrafo introductorio ===== */
+p {
+    text-align: center;
+    color: #ddd;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+/* ===== Menú principal ===== */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+ul li a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+iframe, .contenedor, .tu-clase {
+    background-color: transparent;
+}
